@@ -6,7 +6,7 @@ body{
 nav{
 	background: #021428;
 	width: 1340px;
-	height: 80px;
+	height: 90px;
 }
 
 a{
@@ -15,4 +15,19 @@ a{
 	font-weight: bolder;
 	text-decoration: none;
 	margin-left: 20px;
+}
+
+a:hover{
+	color: yellow;
+}
+
+a.active{
+	color: lime;
+}
+
+img#logo{
+	height: 85px;
+	margin-left: 202px;
+	margin-right: -125px;
+	margin-top: -5px;
 }
