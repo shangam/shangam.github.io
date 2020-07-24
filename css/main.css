@@ -5,7 +5,7 @@ body{
 /*Navigation*/
 nav{
 	background: #021428;
-	width: 1340px;
+	width: 1350px;
 	height: 90px;
 }
 
@@ -35,5 +35,25 @@ img#logo{
 /*Slideshow*/
 img#slideshow{
 	border-bottom: 10px solid #021428;
-	width: 1340;
+	width: 1350px;
+}
+
+/*Homepage Content*/
+section#paragraph{
+	margin: 20px;
+	width: 1310px;
+}
+
+/*Footer*/
+footer{
+	margin-top: 60px;
+	background: #021428;
+	width: 1350px;
+	height: 80px;
+	color: white;
+}
+
+p#footer-text{
+	line-height: 5;
+	text-align: center;;
 }
