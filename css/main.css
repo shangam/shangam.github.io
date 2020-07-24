@@ -31,3 +31,9 @@ img#logo{
 	margin-right: -125px;
 	margin-top: -5px;
 }
+
+/*Slideshow*/
+img#slideshow{
+	border-bottom: 10px solid #021428;
+	width: 1340;
+}
