@@ -26,10 +26,10 @@ a.active{
 }
 
 img#logo{
-	height: 85px;
+	height: 70px;
 	margin-left: 202px;
-	margin-right: -125px;
-	margin-top: -5px;
+	margin-right: 5px;
+	margin-top: 5px;
 }
 
 /*Slideshow*/
@@ -42,6 +42,12 @@ img#slideshow{
 section#paragraph{
 	margin: 20px;
 	width: 1310px;
+}
+
+/*Services Page*/
+h1#page-title{
+	margin-left: 202px;
+	color: #021428;
 }
 
 /*Footer*/
