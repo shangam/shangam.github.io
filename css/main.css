@@ -1,65 +1,31 @@
-body{
-	font-family: roboto;
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
 }
-
-/*Navigation*/
-nav{
-	background: #021428;
-	width: 1350px;
-	height: 50px;
+.banner
+{
+	position: relative;
+	min-height: 100vh;
+	background: url(../img/slider2.png);
+	background-size: cover;
+	background-position: right;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
-
-a{
-	line-height: 4;
-	color: white;
-	padding: 20px;
-	font-weight: bolder;
-	text-decoration: none;
-	margin-left: 20px;
+.banner h2
+{
+	font-size: 3em;
+	color: #fff;
+	font-weight: 500;
+	line-height: 1.5em;
 }
-
-a:hover{
-	color: yellow;
-}
-
-a.active{
-	color: lime;
-}
-
-img#logo{
-	height: 60px;
-	border-bottom: 10px solid #021428;
-}
-
-/*Slideshow*/
-img#slideshow{
-	border-bottom: 10px solid #021428;
-	width: 1350px;
-	height: 530px;
-}
-
-/*Homepage Content*/
-section#paragraph{
-	margin: 20px;
-	width: 1310px;
-}
-
-/*Services Page*/
-h1#page-title{
-	margin-left: 202px;
-	color: #021428;
-}
-
-/*Footer*/
-footer{
-	margin-top: 60px;
-	background: #021428;
-	width: 1350px;
-	height: 80px;
-	color: white;
-}
-
-p#footer-text{
-	line-height: 5;
-	text-align: center;;
+.banner h2 span
+{
+	font-size: 3em;
+	font-weight: 500;
 }
