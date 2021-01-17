@@ -1,174 +1,257 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Sangam Bhattarai | Portfolio</title>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sangam Bhattarai | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  color: #426696;
+  font-weight: 600;
+  font-size: 3rem;
+  opacity: 0.8;
+}
+h2,
+p {
+  color: #658ec6;
+  font-weight: 500;
+  opacity: 0.8;
+}
+h3 {
+  color: #426696;
+  font-weight: 600;
+  opacity: 0.8;
+}
+main {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.glass {
+  background: white;
+  min-height: 80vh;
+  width: 60%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2rem;
+  z-index: 2;
+  backdrop-filter: blur(2rem);
+  display: flex;
+}
+.circle1,
+.circle2 {
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3)
+  );
+  height: 20rem;
+  width: 20rem;
+  position: absolute;
+  border-radius: 50%;
+}
+.circle1 {
+  top: 5%;
+  right: 15%;
+}
+.circle2 {
+  bottom: 5%;
+  left: 10%;
+}
+.content {
+  margin: 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.card {
+  display: flex;
+  border-radius: 1rem;
+  margin: 0rem;
+  padding: 1rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+  justify-content: space-between;
+}
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pcard {
+  display: flex;
+  border-radius: 1rem;
+  margin:  1rem;
+  padding: 1rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+  justify-content: center;
+}
+.pcard-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card-info a, .pcard-info a
+{	
+  color: #658ec6;
+  font-weight: 500;
+  opacity: 0.8;
+	text-decoration: none;
+}
+.btn
+{
+	position: relative;
+  display: inline-block;
+	margin: 0.1rem;
+	padding: 0.1rem;
+	font-size: 16px;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 1px;
+	font-weight: 500;
+}
+</style>
 
-	<header>
-		<a href="#" class="logo">Portfolio</a>
-		<div class="toggle" onclick="toggleMenu();"></div>
-		<ul>
-			<li><a href="#home" onclick="toggleMenu();">Home</a></li>
-			<li><a href="#about" onclick="toggleMenu();">About</a></li>
-			<li><a href="#services" onclick="toggleMenu();">Services</a></li>
-			<li><a href="#work" onclick="toggleMenu();">Work</a></li>
-			<li><a href="#testimonial" onclick="toggleMenu();">Testimonial</a></li>
-			<li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
-		</ul>
-	</header>
 
-	<section class="banner" id="home">
-		<div class="textBx">
-			<h2>Hello, I'm <br><span>Sangam Bhattarai</span></h2>
-			<h3>I'm a Web Developer</h3>
-			<a href="#about" class="btn">About Me</a>
-		</div>	
-	</section>
+  </head>
+  <body>
+    <main>
+      <section class="glass">
+        <div class="profile">
+          <div class="pcard">
+            <div class="pcard-info">
+              <img id="profileImage" alt="" height="200" width="200"/>
+              <h3 id="fullName"></h3>
+              <p id="bio"></p>
+              <p id="location"></p>
+            </div>
+          </div>
+          <div class="pcard">
+            <div class="pcard-info">
+              <h3>Find me on</h3>
+              <a id="githubLink">Github</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="content">
+          <div class="cards">
+            <h1>My Projects</h1>
+            <div class="card">
+              <div class="card-info">
+                <h2 id="repoName1"></h2>
+                <p id="description1"></p>
+                <a id="url1" class="btn">View Code</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-info">
+                <h2 id="repoName2"></h2>
+                <p id="description2"></p>
+                <a id="url2" class="btn">View Code</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-info">
+                <h2 id="repoName3"></h2>
+                <p id="description3"></p>
+                <a id="url3" class="btn">View Code</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-info">
+                <h2 id="repoName4"></h2>
+                <p id="description4"></p>
+                <a id="url4" class="btn">View Code</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-info">
+                <h2 id="repoName5"></h2>
+                <p id="description5"></p>
+                <a id="url5" class="btn">View Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-	<section class="about" id="about">
-		<div class="heading">
-			<h2>About Me</h2>
-		</div>
-		<div class="content">
-			<div class="contentBx w50">
-				<h3>I'm a Web Developer</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae consequatur ut facilis. Magni eos, voluptatibus quam labore ad. Voluptate iste sunt, fuga totam dolores, sequi. Iusto eius eum veritatis minus porro aliquam odio voluptatibus molestias est ipsum. Vero ullam sint odit eaque quam minima facere non, provident corporis, eius, asperiores.<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat minus tempore beatae placeat soluta, exercitationem facilis asperiores suscipit ipsum nam.</p>
-			</div>
-			<div class="w50">
-				<img src="img/banner.jpg" class="img" alt="">
-			</div>
-		</div>
-	</section>
+      </section>
+    </main>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <script>
+      fetch("https://api.github.com/users/shangam")
+          .then(response => response.json())
+          .then(function(data){
+              console.log(data)
+              document.getElementById('profileImage').src = data['avatar_url']
+              document.getElementById('fullName').textContent = data['name']
+              document.getElementById('bio').textContent = data['bio']
+              document.getElementById('location').textContent = data['location']
+              document.getElementById('githubLink').href = data['html_url']
+          })
+      
+      fetch("https://api.github.com/repos/shangam/shangam.github.io")
+          .then(response => response.json())
+          .then(function(data){
+              console.log(data)
+              document.getElementById('repoName1').textContent = data['name']
+              document.getElementById('description1').textContent = data['description']
+              document.getElementById('url1').href = data['html_url']
+          })
+          
+          fetch("https://api.github.com/repos/shangam/college-series-comics")
+          .then(response => response.json())
+          .then(function(data){
+              console.log(data)
+              document.getElementById('repoName2').textContent = data['name']
+              document.getElementById('description2').textContent = data['description']
+              document.getElementById('url2').href = data['html_url']
+          })
 
-	<section class="services" id="services">
-		<div class="heading white">
-			<h2>Our Services</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-		</div>
-		<div class="content">
-			<div class="servicesBx">
-				<img src="img/icon1.png" alt="">
-				<h2>Web Design</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos magni eaque dignissimos corporis magnam omnis?</p>
-			</div>
-			<div class="servicesBx">
-				<img src="img/icon2.png" alt="">
-				<h2>Web Development</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos magni eaque dignissimos corporis magnam omnis?</p>
-			</div>
-			<div class="servicesBx">
-				<img src="img/icon3.png" alt="">
-				<h2>API Development</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos magni eaque dignissimos corporis magnam omnis?</p>
-			</div>
-			<div class="servicesBx">
-				<img src="img/icon4.png" alt="">
-				<h2>Mobile Application</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos magni eaque dignissimos corporis magnam omnis?</p>
-			</div>
-		</div>
-	</section>
+          fetch("https://api.github.com/repos/shangam/laravel-api-development")
+          .then(response => response.json())
+          .then(function(data){
+              console.log(data)
+              document.getElementById('repoName3').textContent = data['name']
+              document.getElementById('description3').textContent = data['description']
+              document.getElementById('url3').href = data['html_url']
+          })          
 
-	<section class="work" id="work">
-		<div class="heading">
-			<h2>Our Latest Work</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-		</div>
-		<div class="content">
-			<div class="workBx">
-				<img src="img/product1.jpg" alt="">
-			</div>
-			<div class="workBx">
-				<img src="img/product2.jpg" alt="">
-			</div>
-			<div class="workBx">
-				<img src="img/product3.jpg" alt="">
-			</div>
-			<div class="workBx">
-				<img src="img/product4.jpg" alt="">
-			</div>
-		</div>
-		<div class="heading">
-			<a href="#" class="btn">View More</a>
-		</div>
-	</section>
+          fetch("https://api.github.com/repos/shangam/mycollege")
+          .then(response => response.json())
+          .then(function(data){
+              console.log(data)
+              document.getElementById('repoName4').textContent = data['name']
+              document.getElementById('description4').textContent = data['description']
+              document.getElementById('url4').href = data['html_url']
+          })
 
-	<section class="testimonial" id="testimonial">
-		<div class="heading">
-			<h2>Testimonial</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-		</div>
-		<div class="content">
-			<div class="testimonialBx">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto distinctio unde, numquam quos delectus corrupti.</p>
-				<h3>Someone Famous <br><span>Creative Designer</span></h3>
-			</div>
-			<div class="testimonialBx">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto distinctio unde, numquam quos delectus corrupti.</p>
-				<h3>Someone Famous <br><span>Creative Designer</span></h3>
-			</div>
-		</div>
-	</section>
+          fetch("https://api.github.com/repos/shangam/hebs")
+          .then(response => response.json())
+          .then(function(data){
+              console.log(data)
+              document.getElementById('repoName5').textContent = data['name']
+              document.getElementById('description5').textContent = data['description']
+              document.getElementById('url5').href = data['html_url']
+          })          
 
-	<section class="contact" id="contact">
-		<div class="heading white">
-			<h2>Contact us</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-		</div>
-		<div class="content">
-			<div class="contactInfo">
-				<h3>Contact Info</h3>
-				<div class="contactInfoBx">
-					<div class="box">
-						<div class="icon">
-							<i class="fa fa-map-marker"></i>
-						</div>	
-						<div class="text">
-							<h3>Address</h3>
-							<p>Dharan, Sunsari<br>Nepal</p>
-						</div>	
-					</div>
-					<div class="box">
-						<div class="icon">
-							<i class="fa fa-envelope"></i>
-						</div>	
-						<div class="text">
-							<h3>Email</h3>
-							<p>bsangam44@gmail.com</p>
-						</div>	
-					</div>
-				</div>
-			</div>
-			<div class="formBx">
-				<form action="">
-					<h3>Message Me</h3>
-					<input type="text" name="" placeholder="Full name">
-					<input type="email" name="" placeholder="Email">
-					<textarea name="" placeholder="Your Message"></textarea>
-					<input type="submit" value="send">
-				</form>
-			</div>
-		</div>
-	</section>
-
-	<div class="copyright">
-		<p>Copyright &copy; Sangam 2020. All rights reserved.</p>
-	</div>
-
-	<script type="text/javascript">
-		window.addEventListener('scroll', function(){
-			var header = document.querySelector('header');
-			header.classList.toggle('sticky', window.scrollY > 0);
-		});
-		function toggleMenu(){
-			var menuToggle = document.querySelector('.toggle');
-			var menu = document.querySelector('.menu');
-			menuToggle.class.toggle('active');
-			menu.class.toggle('active');
-		}
-	</script>
-</body>
+  </script>
+  </body>
 </html>
